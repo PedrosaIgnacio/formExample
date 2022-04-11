@@ -1,5 +1,12 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import {
+  Button,
+  Container,
+  Form,
+  FormControl,
+  Nav,
+  Navbar,
+} from "react-bootstrap";
 import { NavElement } from "./NavElement";
 
 export const NavBar: React.FC = () => {
@@ -10,19 +17,14 @@ export const NavBar: React.FC = () => {
       id: 1,
     },
     {
-      name: "Navitem",
+      name: "About Us",
       path: "/",
       id: 2,
     },
     {
-      name: "Navitem",
+      name: "Contact",
       path: "/",
       id: 3,
-    },
-    {
-      name: "Navitem",
-      path: "/",
-      id: 4,
     },
   ];
 
@@ -41,6 +43,15 @@ export const NavBar: React.FC = () => {
               );
             })}
           </Nav>
+          <Form className="d-flex">
+            <FormControl
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-light">Search</Button>
+          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>

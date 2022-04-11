@@ -13,7 +13,6 @@ function App() {
       <div>
         <BrowserRouter>
           <div>
-            <NavBar />
             <Routes>
               <Route path="/" element={<IndexPage />} />
             </Routes>
